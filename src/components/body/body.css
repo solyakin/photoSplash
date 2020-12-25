@@ -1,0 +1,120 @@
+.image-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 5;
+}
+.image-modal-container{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 10%;
+    top: 3%;
+    object-fit: scale-down;
+    border: 1px solid #e3e3e3;
+    background-color: white;
+    border-radius: 5px;
+}
+.image-modal-container > img{
+    width: 50%;
+    height: 80%;
+    margin-top: 30px;
+}
+.body{
+    column-count: 3;
+    padding: 1rem;
+}
+.image-item{
+    margin-bottom: 1rem;
+    width: 400px;
+}
+.profile_image{
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.image-name{
+    display: flex;
+    align-items: center;
+}
+.close{
+    color: #e3e3e3;
+    margin-right: 13px;
+}
+.image-modal-title{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.icons button{
+    border: 1px solid rgb(187, 183, 183);
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.icons button:hover{
+    border: 1px solid grey
+}
+.top-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-arrow-down, .fa-heart, .fa-plus, .download-btn{
+    color: rgb(187, 183, 183);
+}
+@media only screen and (max-width: 1200px){
+    .body{
+        column-count: 2;
+        padding: 2px;
+    }
+    .image-details{
+        margin-left: 40px;
+    }
+}
+@media only screen and (max-width: 850px){
+    .body{
+        column-count: 1;
+    }
+    .container{
+        padding: 0 5px;
+    }
+    .image-details{
+        text-align: center;
+    }
+    .image-modal-container{
+        width: 90%;
+        left: 5%;
+        top: 8%;
+    }
+    .image-modal-container > img{
+        width: 70%;
+        height: 60%;
+    }
+    .top-section{
+        flex-wrap: nowrap;
+    }
+    .icons > button{
+        padding: 2px 5px;
+    }
+    .download-btn{
+        display: none;
+    }
+}
+@media only screen and (max-width:400px){
+    .container{
+        width: 300px;
+    }
+    .image-details{
+        margin-left: -15px;
+        width: 270px;
+    }
+    .image-item{
+        width: 300px;
+    }
+}
